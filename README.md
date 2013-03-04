@@ -22,6 +22,7 @@ Rename `asterctl/settings.py-example` to `asterctl/settings.py` and edit follow 
 - `TIME_ZONE`
 
 Run project:
+
     % ./manager.py syncdb
     % ./manager.py runserver [ip:port]
 
