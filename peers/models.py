@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext as _
+try:
+    from asterctl.settings import PEER_DB
+except ImportError:
+    PEER_DB = 'peers'
 
 PEER_TYPES = (('friend', 'friend',)
               , ('user', 'user',)
@@ -284,7 +288,7 @@ class Peer(models.Model):
     class Meta:
         verbose_name= _('Peer')
         verbose_name_plural = _('Peers')
-        db_table = 'peers'
+        db_table = PEER_DB
         permissions = (
                    ('can_view_sippeer', _('Can view on site')),
         )

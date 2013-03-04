@@ -1,6 +1,10 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from django.utils.translation import ugettext as _
+try:
+    from asterctl.settings import CDR_DB
+except ImportError:
+    CDR_DB = 'cdr'
 
 class CDR(models.Model):
     u"""
@@ -29,7 +33,7 @@ class CDR(models.Model):
     class Meta:
         verbose_name = _('CDR')
         verbose_name_plural = _('CDRs')
-        db_table = 'cdr'
+        db_table = CDR_DB
         permissions = (
                    ('can_view_cdr', _('Can view on site')),
         )

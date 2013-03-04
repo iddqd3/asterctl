@@ -22,6 +22,15 @@ DATABASES = {
     }
 }
 
+#################
+# asterctl settings
+
+CDR_DB = 'cdr'
+PEER_DB = 'peers'
+
+##
+#################
+
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.4/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
@@ -124,6 +133,9 @@ INSTALLED_APPS = (
 
     'django.contrib.admin',
     'django.contrib.admindocs',
+    
+    'cdr',
+    'peers',
 )
 
 # A sample logging configuration. The only tangible logging
