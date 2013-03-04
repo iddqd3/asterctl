@@ -16,10 +16,12 @@ Recommended installation on [virtualenv](http://www.virtualenv.org/)
 
 Rename `mysql.cnf-example` to `mysql-cnf` and edit
 Rename `asterctl/settings.py-example` to `asterctl/settings.py` and edit follow variables:
-- ADMINS
-- CDR_DB
-- PEER_DB
-- TIME_ZONE
+- `ADMINS`
+- `CDR_DB`
+- `PEER_DB`
+- `TIME_ZONE`
 
+Run project:
     % ./manager.py syncdb
     % ./manager.py runserver [ip:port]
+
